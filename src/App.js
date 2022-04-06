@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from "react";
+import SquareComponent from "./SquareComponent";
+function App(){
+    return(
+        <div className="app-header">
+            <p className="heading-text">Tic Tac Toe</p>
+            <div className="row">
+                <SquareComponent className='b-bottom-right'/>
+                <SquareComponent className='b-bottom-right'/>
+                <SquareComponent className='b-bottom'/>
+            </div>
+            <div className="row">
+                <SquareComponent className='b-bottom-right'/>
+                <SquareComponent className='b-bottom-right'/>
+                <SquareComponent className='b-bottom'/>
+            </div>
+            <div className="row">
+                <SquareComponent className='b-right'/>
+                <SquareComponent className='b-right'/>
+                <SquareComponent/>
+            </div>
+            <button className="clear-button">Clear Came</button>
+        </div>
+    );
 }
-
 export default App;
